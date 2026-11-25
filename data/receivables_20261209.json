@@ -1,0 +1,201 @@
+{
+  "invoices": [
+    {
+      "id": "I1",
+      "seller": "V1",
+      "buyer": "B1",
+      "currency": "CNY",
+      "issued": "08:00"
+    },
+    {
+      "id": "I2",
+      "seller": "V1",
+      "buyer": "B2",
+      "currency": "CNY",
+      "issued": "08:05"
+    }
+  ],
+  "items": [
+    {
+      "id": "L1",
+      "invoice": "I1",
+      "order_line": "D-17",
+      "confirmed": true,
+      "disputed": false,
+      "cents": 120000
+    },
+    {
+      "id": "L2",
+      "invoice": "I1",
+      "order_line": "D-18",
+      "confirmed": true,
+      "disputed": false,
+      "cents": 49000
+    },
+    {
+      "id": "L3",
+      "invoice": "I1",
+      "order_line": "D-19",
+      "confirmed": true,
+      "disputed": true,
+      "cents": 18000
+    },
+    {
+      "id": "L4",
+      "invoice": "I2",
+      "order_line": "D-17",
+      "confirmed": true,
+      "disputed": false,
+      "cents": 32000
+    }
+  ],
+  "offers": [
+    {
+      "id": "O1",
+      "item": "L1",
+      "fund": "F1",
+      "cents": 70000,
+      "requested": "09:10",
+      "accepted": "09:40"
+    },
+    {
+      "id": "O2",
+      "item": "L1",
+      "fund": "F2",
+      "cents": 65000,
+      "requested": "09:20",
+      "accepted": "09:41"
+    },
+    {
+      "id": "O3",
+      "item": "L2",
+      "fund": "F2",
+      "cents": 32000,
+      "requested": "09:50",
+      "accepted": "10:15"
+    },
+    {
+      "id": "O4",
+      "item": "L3",
+      "fund": "F1",
+      "cents": 12000,
+      "requested": "10:01",
+      "accepted": null
+    }
+  ],
+  "notices": [
+    {
+      "id": "N1",
+      "offer": "O1",
+      "buyer": "B1",
+      "key": "doc-A",
+      "delivered": "11:00",
+      "received": "11:15"
+    },
+    {
+      "id": "N2",
+      "offer": "O1",
+      "buyer": "B1",
+      "key": "doc-A",
+      "delivered": "12:00",
+      "received": "11:15"
+    },
+    {
+      "id": "N3",
+      "offer": "O3",
+      "buyer": "B1",
+      "key": "doc-B",
+      "delivered": "12:20",
+      "received": "12:50"
+    }
+  ],
+  "transfers": [
+    {
+      "id": "P1",
+      "buyer": "B1",
+      "detail": "L1",
+      "payee": "V1",
+      "cents": 25000,
+      "released": "11:02",
+      "seen": "13:10",
+      "bank_ref": "Q112"
+    },
+    {
+      "id": "P2",
+      "buyer": "B1",
+      "detail": "L1",
+      "payee": "F1",
+      "cents": 15000,
+      "released": "11:29",
+      "seen": "11:35",
+      "bank_ref": "Q113"
+    },
+    {
+      "id": "P3",
+      "buyer": "B1",
+      "detail": null,
+      "payee": "V1",
+      "cents": 12000,
+      "released": "11:34",
+      "seen": "12:20",
+      "bank_ref": "Q114"
+    },
+    {
+      "id": "P4",
+      "buyer": "B2",
+      "detail": "L4",
+      "payee": "V1",
+      "cents": 31000,
+      "released": "12:20",
+      "seen": "12:50",
+      "bank_ref": "Q115"
+    }
+  ],
+  "adjustments": [
+    {
+      "id": "A1",
+      "item": "L1",
+      "amount": 30000,
+      "type": "return",
+      "effective": "11:55",
+      "posted": "14:20",
+      "complaint": "open"
+    },
+    {
+      "id": "A2",
+      "item": "L2",
+      "amount": 9000,
+      "type": "return",
+      "effective": "13:10",
+      "posted": "13:15",
+      "complaint": "resolved"
+    },
+    {
+      "id": "A3",
+      "item": "L1",
+      "amount": 30000,
+      "type": "return",
+      "effective": "11:55",
+      "posted": "16:40",
+      "complaint": "resolved"
+    }
+  ],
+  "funding": [
+    {
+      "id": "FND1",
+      "offer": "O1",
+      "fund": "F1",
+      "scheduled": "10:30",
+      "final_amount": 70000,
+      "booked": "11:05"
+    },
+    {
+      "id": "FND2",
+      "offer": "O3",
+      "fund": "F2",
+      "scheduled": "10:40",
+      "final_amount": 32000,
+      "booked": null
+    }
+  ]
+}
